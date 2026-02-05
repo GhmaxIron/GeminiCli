@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آکادمی ریاضی | آموزش تخصصی ریاضیات</title>
+    
+    <!-- دریافت فونت وزیرمتن -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    
+    <!-- دریافت Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- تنظیمات شخصی‌سازی Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', // آبی نفتی (Blue-900)
+                        secondary: '#172554', // آبی تیره‌تر برای هاور
+                        accent: '#f59e0b', // نارنجی/زرد (Amber-500)
+                        accentHover: '#d97706',
+                    },
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* تنظیمات کلی فونت */
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                </svg>
+                <span class="text-2xl font-bold text-primary tracking-tight">آکادمی ریاضی</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex gap-8 text-gray-600 font-medium">
+                <a href="#" class="hover:text-primary transition">خانه</a>
+                <a href="#" class="hover:text-primary transition">دوره‌ها</a>
+                <a href="#" class="hover:text-primary transition">اساتید</a>
+                <a href="#" class="hover:text-primary transition">وبلاگ</a>
+                <a href="#" class="hover:text-primary transition">تماس با ما</a>
+            </nav>
+
+            <!-- Buttons -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#" class="text-primary font-medium hover:text-secondary">ورود</a>
+                <a href="#" class="bg-accent hover:bg-accentHover text-white px-5 py-2 rounded-lg font-bold shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <span>سبد خرید</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-primary focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-200">
+            <div class="flex flex-col px-4 py-4 gap-4">
+                <a href="#" class="text-gray-700 hover:text-primary">خانه</a>
+                <a href="#" class="text-gray-700 hover:text-primary">دوره‌ها</a>
+                <a href="#" class="text-gray-700 hover:text-primary">اساتید</a>
+                <a href="#" class="text-gray-700 hover:text-primary">ورود به حساب</a>
+                <a href="#" class="bg-accent text-white px-4 py-2 rounded-lg text-center font-bold">سبد خرید</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-20 px-4">
+        <div class="container mx-auto text-center max-w-3xl">
+            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+                یادگیری ریاضی، <span class="text-accent">ساده‌تر از همیشه</span>
+            </h1>
+            <p class="text-lg md:text-xl text-blue-100 mb-10 leading-relaxed">
+                آموزش تخصصی و مفهومی ریاضیات از پایه هفتم تا کنکور رشته ریاضی فیزیک. 
+                با بهترین اساتید، نمره ۲۰ و درصد بالای کنکور رو تضمین کن.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button onclick="document.getElementById('courses-section').scrollIntoView({behavior: 'smooth'})" class="bg-accent hover:bg-accentHover text-white text-lg font-bold px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-1">
+                    مشاهده دوره‌ها
+                </button>
+                <button class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white text-lg font-bold px-8 py-4 rounded-xl transition">
+                    مشاوره رایگان
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products/Courses Section -->
+    <section id="courses-section" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">جدیدترین دوره‌های آموزشی</h2>
+                <div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Grid Container for Cards -->
+            <div id="course-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cards will be injected here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section (Optional but good for Landing Page) -->
+    <section class="py-12 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-center">
+            <div class="p-6">
+                <div class="w-16 h-16 bg-blue-100 text-primary rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                    🎥
+                </div>
+                <h3 class="font-bold text-xl mb-2">ویدیوهای با کیفیت</h3>
+                <p class="text-gray-600 text-sm">ضبط شده در استودیو با کیفیت Full HD</p>
+            </div>
+            <div class="p-6">
+                <div class="w-16 h-16 bg-orange-100 text-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                    📝
+                </div>
+                <h3 class="font-bold text-xl mb-2">جزوات اختصاصی</h3>
+                <p class="text-gray-600 text-sm">دانلود جزوه کامل هر فصل همراه با ویدیو</p>
+            </div>
+            <div class="p-6">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                    💬
+                </div>
+                <h3 class="font-bold text-xl mb-2">پشتیبانی آنلاین</h3>
+                <p class="text-gray-600 text-sm">رفع اشکال مستقیم توسط اساتید دوره</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-blue-100 py-10 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center border-b border-blue-800 pb-8 mb-8">
+                <div>
+                    <h4 class="text-2xl font-bold text-white mb-2">آکادمی ریاضی</h4>
+                    <p class="text-sm opacity-80">مرجع تخصصی آموزش ریاضیات کشور</p>
+                </div>
+                <div class="flex justify-start md:justify-end gap-4">
+                    <a href="#" class="w-10 h-10 bg-blue-800 hover:bg-accent rounded-full flex items-center justify-center transition">IG</a>
+                    <a href="#" class="w-10 h-10 bg-blue-800 hover:bg-accent rounded-full flex items-center justify-center transition">TG</a>
+                    <a href="#" class="w-10 h-10 bg-blue-800 hover:bg-accent rounded-full flex items-center justify-center transition">LN</a>
+                </div>
+            </div>
+            <div class="text-center text-sm">
+                &copy; 1402 تمامی حقوق برای آکادمی ریاضی محفوظ است. طراحی شده با ❤️
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // 1. Data Structure (Array of Objects)
+        const courses = [
+            {
+                id: 1,
+                title: 'ریاضیات گسسته جامع',
+                grade: 'دوازدهم ریاضی',
+                teacher: 'مهندس رضایی',
+                price: 850000,
+                image: 'https://placehold.co/600x400/1e3a8a/FFFFFF?text=Discrete+Math'
+            },
+            {
+                id: 2,
+                title: 'حسابان (۱) - حد و پیوستگی',
+                grade: 'یازدهم ریاضی',
+                teacher: 'دکتر کریمی',
+                price: 600000,
+                image: 'https://placehold.co/600x400/e2e8f0/1e3a8a?text=Calculus+1'
+            },
+            {
+                id: 3,
+                title: 'هندسه دهم (صفر تا صد)',
+                grade: 'دهم ریاضی',
+                teacher: 'استاد علوی',
+                price: 550000,
+                image: 'https://placehold.co/600x400/f59e0b/FFFFFF?text=Geometry+10'
+            },
+            {
+                id: 4,
+                title: 'ریاضی هفتم - فصل ۱ تا ۴',
+                grade: 'متوسطه اول',
+                teacher: 'خانم محمدی',
+                price: 350000,
+                image: 'https://placehold.co/600x400/1e3a8a/FFFFFF?text=Math+7th'
+            },
+            {
+                id: 5,
+                title: 'آمار و احتمال کنکور',
+                grade: 'یازدهم ریاضی',
+                teacher: 'مهندس رضایی',
+                price: 450000,
+                image: 'https://placehold.co/600x400/172554/FFFFFF?text=Statistics'
+            },
+            {
+                id: 6,
+                title: 'ریاضی نهم (آمادگی تیزهوشان)',
+                grade: 'متوسطه اول',
+                teacher: 'دکتر کریمی',
+                price: 780000,
+                image: 'https://placehold.co/600x400/f59e0b/FFFFFF?text=Math+9th'
+            }
+        ];
+
+        // 2. DOM Elements
+        const courseContainer = document.getElementById('course-grid');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // 3. Helper Function to Format Price (Persian Numbers & Commas)
+        function formatPrice(price) {
+            return price.toLocaleString('fa-IR');
+        }
+
+        // 4. Render Function
+        function renderCourses() {
+            let htmlContent = '';
+
+            courses.forEach(course => {
+                htmlContent += `
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full">
+                        <!-- Image Container -->
+                        <div class="relative h-48 overflow-hidden group">
+                            <img src="${course.image}" alt="${course.title}" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <div class="absolute top-3 right-3 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                                ${course.grade}
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 line-clamp-1">${course.title}</h3>
+                            
+                            <div class="flex items-center gap-2 mb-4 text-gray-500 text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                                <span>مدرس: ${course.teacher}</span>
+                            </div>
+
+                            <!-- Footer of Card: Price & Action -->
+                            <div class="mt-auto flex justify-between items-center border-t border-gray-100 pt-4">
+                                <div class="flex flex-col">
+                                    <span class="text-xs text-gray-400">قیمت دوره</span>
+                                    <div class="text-primary font-bold text-lg">
+                                        ${formatPrice(course.price)} <span class="text-xs font-light">تومان</span>
+                                    </div>
+                                </div>
+                                <button class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm">
+                                    خرید دوره
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            courseContainer.innerHTML = htmlContent;
+        }
+
+        // 5. Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCourses();
+        });
+
+        // 6. Mobile Menu Logic
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+    </script>
+</body>
+</html>
