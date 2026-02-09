@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آکادمی آموزش ریاضی</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content container">
+            <h1 class="site-logo">آکادمی آموزش ریاضی</h1>
+            <p class="slogan">آموزش ریاضی از پایه تا پیشرفته</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul class="nav-list container">
+            <li><a href="#home">صفحه اصلی</a></li>
+            <li><a href="#about">معرفی ما</a></li>
+            <li><a href="#testimonials">سوابق و رضایت‌ها</a></li>
+            <li><a href="#courses">دوره‌ها</a></li>
+            <li><a href="#contact">تماس با ما</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-slideshow">
+        <div class="slideshow-container container">
+            <div class="slide active">
+                <div class="slide-content">
+                    <h2>دوره جامع ریاضی نهم</h2>
+                    <p>آموزش کامل مفاهیم، حل تمرینات و آمادگی برای امتحانات نهایی.</p>
+                    <button class="call-to-action">مشاهده جزئیات دوره</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>بسته‌ آمادگی المپیاد ریاضی</h2>
+                    <p>متدهای پیشرفته و تمرینات چالش‌برانگیز برای دانش‌آموزان مستعد.</p>
+                    <button class="call-to-action">مشاهده جزئیات دوره</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>حل تشریحی سوالات کنکور</h2>
+                    <p>تحلیل دقیق سوالات کنکور سال‌های اخیر و نکات طلایی.</p>
+                    <button class="call-to-action">مشاهده جزئیات دوره</button>
+                </div>
+            </div>
+
+            <a class="prev-slide">&#10094;</a>
+            <a class="next-slide">&#10095;</a>
+
+            <div class="slide-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content container">
+        <aside class="sidebar-accordion">
+            <div class="accordion-block">
+                <div class="accordion-header">
+                    <h3>دوره‌های پایه <span class="toggle-icon">+</span></h3>
+                </div>
+                <div class="accordion-body">
+                    <ul>
+                        <li data-category="basic" data-type="course">ریاضی ششم</li>
+                        <li data-category="basic" data-type="course">ریاضی هفتم</li>
+                        <li data-category="basic" data-type="course">ریاضی هشتم</li>
+                        <li data-category="basic" data-type="course">ریاضی نهم</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-block">
+                <div class="accordion-header">
+                    <h3>تمرین‌ها و کاربرگ‌ها <span class="toggle-icon">+</span></h3>
+                </div>
+                <div class="accordion-body">
+                    <ul>
+                        <li data-category="exercises" data-type="exercise">کاربرگ‌های جبری</li>
+                        <li data-category="exercises" data-type="exercise">تمرینات هندسه</li>
+                        <li data-category="exercises" data-type="exercise">سوالات ترکیبی</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-block">
+                <div class="accordion-header">
+                    <h3>آزمون‌های نمونه و سوالات نهایی <span class="toggle-icon">+</span></h3>
+                </div>
+                <div class="accordion-body">
+                    <ul>
+                        <li data-category="exams" data-type="exam">نمونه سوالات ترم اول</li>
+                        <li data-category="exams" data-type="exam">سوالات نهایی سال‌های گذشته</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-block">
+                <div class="accordion-header">
+                    <h3>بسته‌های ویژه المپیاد <span class="toggle-icon">+</span></h3>
+                </div>
+                <div class="accordion-body">
+                    <ul>
+                        <li data-category="olympiad" data-type="course">المپیاد ابتدایی</li>
+                        <li data-category="olympiad" data-type="course">المپیاد متوسطه</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <section class="content-panel">
+            <div class="filter-tabs">
+                <button class="filter-button active" data-filter="all">همه</button>
+                <button class="filter-button" data-filter="course">درسی</button>
+                <button class="filter-button" data-filter="exercise">تمرینات</button>
+                <button class="filter-button" data-filter="exam">نمونه سوالات</button>
+            </div>
+            <div class="content-display">
+                <!-- Content will be loaded here by JavaScript -->
+                <p>لطفاً یک گزینه را از نوار کناری انتخاب کنید.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Telegram">Telegram</a>
+            </div>
+            <p class="copyright">© ۱۴۰۴ کلیه حقوق این وب‌سایت متعلق به آکادمی آموزش ریاضی است.</p>
+            <p class="rights-reserved">تمامی حقوق مادی و معنوی این محصولات برای ناشر محفوظ است.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
