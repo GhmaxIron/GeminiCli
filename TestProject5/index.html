@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آموزش ریاضی آنلاین</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="brand-name">آموزش ریاضی آنلاین</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">صفحه اصلی</a></li>
+                    <li><a href="#about">معرفی ما</a></li>
+                    <li><a href="#courses">دوره‌ها</a></li>
+                    <li><a href="#products">محصولات</a></li>
+                    <li><a href="#contact">تماس با ما</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-layout container">
+        <!-- The sidebar will appear first in HTML for easier mobile stacking, then positioned with CSS -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <div class="section-header" aria-expanded="false">
+                    <h3>مباحث درسی پایه‌ای</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <ul class="submenu">
+                    <li data-category="function">تابع و انواع آن</li>
+                    <li data-category="limit-continuity">حد و پیوستگی</li>
+                    <li data-category="derivative">مشتق و کاربردها</li>
+                    <li data-category="integral">انتگرال معین و نامعین</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="section-header" aria-expanded="false">
+                    <h3>ریاضی دبیرستان</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <ul class="submenu">
+                    <li data-category="statistics">آمار و احتمال</li>
+                    <li data-category="grade12-exams">هندسه تحلیلی</li>
+                    <li data-category="grade12-exams">گسسته و جبر</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="section-header" aria-expanded="false">
+                    <h3>ریاضی دانشگاهی</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <ul class="submenu">
+                    <li data-category="university-prep">ریاضی عمومی ۱</li>
+                    <li data-category="university-prep">معادلات دیفرانسیل</li>
+                    <li data-category="olympiad">آنالیز ریاضی</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="section-header" aria-expanded="false">
+                    <h3>تمرینات و کاربرگ‌ها</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <ul class="submenu">
+                    <li data-category="function-exercises">تمرینات تابع</li>
+                    <li data-category="limit-exercises">تمرینات پیشرفته حد</li>
+                    <li data-category="derivative-exercises">کاربرگ مشتق</li>
+                    <li data-category="statistics">تمرینات آمار</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="section-header" aria-expanded="false">
+                    <h3>نمونه سؤالات و آزمون‌ها</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <ul class="submenu">
+                    <li data-category="grade12-exams">سؤالات نهایی دوازدهم</li>
+                    <li data-category="konkur-exams">نمونه سؤالات کنکور</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="section-header" aria-expanded="false">
+                    <h3>دوره‌های ویژه و المپیاد</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <ul class="submenu">
+                    <li data-category="olympiad">المپیاد ریاضی مقدماتی</li>
+                    <li data-category="university-prep">آمادگی آزمون‌های ورودی</li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="main-content-panel">
+            <div class="slideshow-container">
+                <div class="slides">
+                    <div class="slide" style="background-color: #e6f7ff;">
+                        <h2>دوره‌های ویدئویی جامع ریاضی</h2>
+                        <p>با بهترین اساتید، ریاضی را از پایه بیاموزید و پیشرفت کنید.</p>
+                    </div>
+                    <div class="slide" style="background-color: #d9efff;">
+                        <h2>جزوه‌ها و کتاب‌های الکترونیکی</h2>
+                        <p>دسترسی به منابع آموزشی کامل و به‌روز برای تمام مقاطع.</p>
+                    </div>
+                    <div class="slide" style="background-color: #f0f8ff;">
+                        <h2>تمرینات حل‌شده و نمونه سؤالات</h2>
+                        <p>با حل تمرینات متنوع و سؤالات امتحانی، آمادگی خود را افزایش دهید.</p>
+                    </div>
+                </div>
+                <a class="prev" aria-label="اسلاید قبلی">&#10094;</a>
+                <a class="next" aria-label="اسلاید بعدی">&#10095;</a>
+                <div class="dots-container">
+                    <span class="dot" aria-label="برو به اسلاید ۱"></span>
+                    <span class="dot" aria-label="برو به اسلاید ۲"></span>
+                    <span class="dot" aria-label="برو به اسلاید ۳"></span>
+                </div>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">همه</button>
+                <button class="filter-btn" data-filter="درسی">درسی</button>
+                <button class="filter-btn" data-filter="تمرینات">تمرینات</button>
+                <button class="filter-btn" data-filter="نمونه سؤالات">نمونه سؤالات</button>
+            </div>
+
+            <div class="cards-container">
+                <!-- Cards will be dynamically loaded here by JavaScript -->
+            </div>
+            <p class="no-match-message" style="display: none;">موردی با این فیلترها پیدا نشد.</p>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="copyright">© ۱۴۰۵ تمامی حقوق مادی و معنوی این وب‌سایت محفوظ است.</p>
+            <p class="rights-statement">هرگونه کپی‌برداری بدون اجازه ناشر پیگرد قانونی دارد.</p>
+            <div class="social-links">
+                <a href="#" aria-label="لینکدین">LinkedIn</a>
+                <a href="#" aria-label="اینستاگرام">Instagram</a>
+                <a href="#" aria-label="تلگرام">Telegram</a>
+                <a href="#" aria-label="واتساپ">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
